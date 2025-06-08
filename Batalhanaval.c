@@ -39,13 +39,13 @@ int main() {
 
     for (int i = 0; i < TAMANHO_NAVIO; i++) { 
 
-        int col = inicio_horizontal[1] + i; 
+    int col = inicio_horizontal[1] + i; 
 
-        if (col < TAMANHO_TABULEIRO) { 
+    if (col < TAMANHO_TABULEIRO) { 
 
-            tabuleiro[inicio_horizontal[0]][col] = 3; 
+        tabuleiro[inicio_horizontal[0]][col] = 3; 
 
-            navio_horizontal[i] = inicio_horizontal[0] * TAMANHO_TABULEIRO + col; 
+        navio_horizontal[i] = inicio_horizontal[0] * TAMANHO_TABULEIRO + col; 
 
         } 
 
@@ -75,11 +75,12 @@ int main() {
 
         for (int j = 0; j < TAMANHO_NAVIO; j++) { 
 
-            if (navio_horizontal[i] == navio_vertical[j]) { 
+        if (navio_horizontal[i] == navio_vertical[j]) { 
 
-                printf("Erro: Navios se sobrepoem!\n"); 
+            printf("Erro: Navios se sobrepoem!\n"); 
 
-                return 1; 
+            
+            return 1; 
 
             } 
 
@@ -99,9 +100,9 @@ int main() {
 
         printf("%d ", i); 
 
-        for (int j = 0; j < TAMANHO_TABULEIRO; j++) { 
+    for (int j = 0; j < TAMANHO_TABULEIRO; j++) { 
 
-            printf("%d ", tabuleiro[i][j]); 
+        printf("%d ", tabuleiro[i][j]); 
 
         } 
 
